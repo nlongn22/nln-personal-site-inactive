@@ -1,0 +1,7 @@
+@import '~foundation-sites/scss/util/util';
+
+$global-font-size: 100%;
+
+@function r($pixels) {
+	@return rem-calc($pixels * 1px);
+}

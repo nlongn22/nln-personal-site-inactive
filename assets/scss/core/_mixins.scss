@@ -1,0 +1,9 @@
+@mixin page-gutter() {
+	@each $bp in map-keys($page-gutters) {
+		$gutter: map-get($page-gutters, $bp);
+
+		@include breakpoint($bp) {
+			padding-inline: $gutter;
+		}
+	}
+}

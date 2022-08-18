@@ -1,0 +1,9 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition-duration-slow;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
