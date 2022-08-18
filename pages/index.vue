@@ -17,7 +17,7 @@
             My name is Ngoc Long Nguyen but most people call me Filip. I'm a frontend developer who currently lives in
             Munich, Germany. I am 20 years old and after high school I've decided to take a gap year before entering
             university. After finishing high school in the summer of 2021, I decided to start learning the basics of web
-            development.
+            development, mainly frontend.
             <br />
             <br />
             In my free time (when I'm not learning anything) I like to watch TV shows or hang out with my friends. I'm
