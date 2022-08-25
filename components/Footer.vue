@@ -24,7 +24,11 @@ export default class Footer extends Vue {
         'https://github.com/nlongn22',
     ];
 
-    iconTitles: string[] = ['Go to linkedin.com', 'Email 22nlongn@gmail.com', 'Go to github.com'];
+    iconTitles: string[] = [
+        'Go to linkedin.com',
+        'Email 22nlongn@gmail.com',
+        'Go to github.com',
+    ];
 
     iconNames: string[] = ['fa fa-linkedin', 'fas fa-at', 'fab fa-github'];
 }

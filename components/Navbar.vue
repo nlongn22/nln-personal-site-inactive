@@ -5,12 +5,19 @@
         </section>
 
         <section class="navbar__right">
-            <span class="navbar__link" :class="{ active: $route.name === 'Projects' }">
+            <span
+                class="navbar__link"
+                :class="{ active: $route.name === 'Projects' }"
+            >
                 <nuxt-link to="/projects"> Projects </nuxt-link>
             </span>
             <i
                 class="navbar__theme-switcher"
-                :class="currentTheme === 'dark-theme' ? 'far fa-moon' : 'fas fa-moon'"
+                :class="
+                    currentTheme === 'dark-theme'
+                        ? 'far fa-moon'
+                        : 'fas fa-moon'
+                "
                 @click="toggleTheme"
             ></i>
         </section>
