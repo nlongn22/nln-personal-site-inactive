@@ -19,7 +19,7 @@ import { Component, Vue } from 'nuxt-property-decorator';
 @Component({})
 export default class Footer extends Vue {
     iconLinks: string[] = [
-        'linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
+        'https://linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
         'mailto:22nlongn@gmail.com',
         'https://github.com/nlongn22',
     ];
