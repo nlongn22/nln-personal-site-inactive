@@ -15,7 +15,7 @@ export default {
             { name: 'author', content: 'Ngoc Long Nguyen' },
             { hid: 'og-site_name', property: 'og:site_name', content: 'nnl' },
             { hid: 'og-title', property: 'og:title', content: 'Ngoc Long Nguyen' },
-            { hid: 'og-image', property: 'og:image', content: 'og/og.png' },
+            { hid: 'og-image', property: 'og:image', content: '/og/og.png' },
             { property: 'og:image:type', content: 'image/png' },
             { name: 'theme-color', content: '#fbfbfb' },
         ],
