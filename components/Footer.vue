@@ -19,14 +19,14 @@ import { Component, Vue } from 'nuxt-property-decorator';
 @Component({})
 export default class Footer extends Vue {
     iconLinks: string[] = [
-        'https://www.instagram.com/nlongn22',
+        'linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
         'mailto:22nlongn@gmail.com',
         'https://github.com/nlongn22',
     ];
 
-    iconTitles: string[] = ['Go to instagram.com', 'Email 22nlongn@gmail.com', 'Go to github.com'];
+    iconTitles: string[] = ['Go to linkedin.com', 'Email 22nlongn@gmail.com', 'Go to github.com'];
 
-    iconNames: string[] = ['fab fa-instagram', 'far fa-envelope', 'fab fa-github'];
+    iconNames: string[] = ['fa fa-linkedin', 'fas fa-at', 'fab fa-github'];
 }
 </script>
 
@@ -36,7 +36,7 @@ export default class Footer extends Vue {
 }
 
 .footer__icon {
-    font-size: 24px;
+    font-size: $space-3;
     transition: color 0.3s;
     cursor: pointer;
 
