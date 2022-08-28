@@ -1,15 +1,17 @@
 <template>
     <footer class="footer">
-        <a
-            v-for="(link, index) in iconLinks"
-            :key="index"
-            :href="iconLinks[index]"
-            :title="iconTitles[index]"
-            target="_blank"
-            class="footer__icon"
-        >
-            <i :class="iconNames[index]" />
-        </a>
+        <section>
+            <a
+                v-for="(link, index) in iconLinks"
+                :key="index"
+                :href="iconLinks[index]"
+                :title="iconTitles[index]"
+                target="_blank"
+                class="footer__icon"
+            >
+                <i :class="iconNames[index]" />
+            </a>
+        </section>
     </footer>
 </template>
 
@@ -30,7 +32,7 @@ export default class Footer extends Vue {
         'Go to github.com',
     ];
 
-    iconNames: string[] = ['fa fa-linkedin', 'fas fa-at', 'fab fa-github'];
+    iconNames: string[] = ['fa fa-linkedin', 'fa fa-envelope', 'fa fa-github'];
 }
 </script>
 

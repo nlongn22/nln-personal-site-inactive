@@ -1,16 +1,16 @@
 <template>
     <nav class="navbar">
-        <section :class="{ active: $route.name === 'Home' }">
+        <section>
             <nuxt-link to="/" class="navbar__link"> Home </nuxt-link>
         </section>
 
         <section class="navbar__right">
-            <span
-                class="navbar__link"
-                :class="{ active: $route.name === 'Projects' }"
-            >
-                <nuxt-link to="/projects"> Projects </nuxt-link>
-            </span>
+            <nuxt-link to="/skills" class="navbar__link">
+                Skills
+            </nuxt-link>
+            <nuxt-link to="/projects" class="navbar__link">
+                Projects
+            </nuxt-link>
             <i
                 class="navbar__theme-switcher"
                 :class="
@@ -52,12 +52,12 @@ export default class Navbar extends mixins(ThemeDetector) {}
 .navbar__right {
     display: flex;
     align-items: center;
+    column-gap: $space-2;
     margin-left: $space-2;
 }
 
 .navbar__theme-switcher {
     margin-top: r(-6.5);
-    margin-left: $space-2;
     color: $color-foreground;
     cursor: pointer;
     transition: color $transition-duration-default;

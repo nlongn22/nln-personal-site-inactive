@@ -1,6 +1,8 @@
 <template>
     <main>
-        <h1>Currently WIP...</h1>
+        <section>
+            <h1>Currently WIP...</h1>
+        </section>
     </main>
 </template>
 
