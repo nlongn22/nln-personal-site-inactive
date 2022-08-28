@@ -83,6 +83,7 @@ export default {
         '@nuxtjs/style-resources',
         '@nuxtjs/google-fonts',
         '@nuxtjs/svg',
+        '@nuxtjs/sitemap',
         'nuxt-purgecss',
     ],
 
