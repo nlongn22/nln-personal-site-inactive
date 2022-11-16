@@ -43,40 +43,40 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 @Component({})
 export default class IndexPage extends Vue {
-    message: string = '';
+    message: string = 'Welcome!';
     index: number = 0;
 
-    typeWriter(string: string): void {
-        const stringArray = string.split('');
-        this.message += stringArray[this.index];
-        this.index++;
-    }
+    //  typeWriter(string: string): void {
+    //      const stringArray = string.split('');
+    //      this.message += stringArray[this.index];
+    //      this.index++;
+    //  }
 
-    initTypeWriter(message: string): Promise<void> {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                const interval = setInterval(() => {
-                    this.typeWriter(message);
-                    if (this.message === 'Welcome!') {
-                        resolve();
-                        clearInterval(interval);
-                        return;
-                    }
+    //  initTypeWriter(message: string): Promise<void> {
+    //      return new Promise((resolve) => {
+    //          setTimeout(() => {
+    //              const interval = setInterval(() => {
+    //                  this.typeWriter(message);
+    //                  if (this.message === 'Welcome!') {
+    //                      resolve();
+    //                      clearInterval(interval);
+    //                      return;
+    //                  }
 
-                    if (this.message === message) {
-                        this.message = '';
-                        this.index = 0;
-                        resolve();
-                        clearInterval(interval);
-                    }
-                }, 175);
-            }, 350);
-        });
-    }
+    //                  if (this.message === message) {
+    //                      this.message = '';
+    //                      this.index = 0;
+    //                      resolve();
+    //                      clearInterval(interval);
+    //                  }
+    //              }, 175);
+    //          }, 350);
+    //      });
+    //  }
 
-    mounted(): void {
-        this.initTypeWriter('Welcome!');
-    }
+    //  mounted(): void {
+    //      this.initTypeWriter('Welcome!');
+    //  }
 
     head() {
         return {
