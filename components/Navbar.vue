@@ -11,15 +11,12 @@
             <nuxt-link to="/projects" class="navbar__link">
                 Projects
             </nuxt-link>
-            <i
+            <span
                 class="navbar__theme-switcher"
-                :class="
-                    currentTheme === 'dark-theme'
-                        ? 'far fa-moon'
-                        : 'fas fa-moon'
-                "
                 @click="toggleTheme"
-            ></i>
+            >
+                {{ currentThemeLabel }}
+            </span>
         </section>
     </nav>
 </template>
@@ -29,7 +26,11 @@ import { Component, mixins } from 'nuxt-property-decorator';
 import ThemeDetector from '@/mixins/ThemeDetector';
 
 @Component({})
-export default class Navbar extends mixins(ThemeDetector) {}
+export default class Navbar extends mixins(ThemeDetector) {
+    get currentThemeLabel() {
+        return this.currentTheme === "dark-theme" ? 'Light' : 'Dark';
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -39,14 +40,7 @@ export default class Navbar extends mixins(ThemeDetector) {}
 }
 
 .navbar__link {
-    padding-block-end: $space-0;
-    border-block-end: r(2.5) solid transparent;
-    transition: border-color $transition-duration-default;
-
-    &:hover,
-    &.nuxt-link-exact-active {
-        border-color: $color-border-regular;
-    }
+    @include border-bottom-link;
 }
 
 .navbar__right {
@@ -58,7 +52,7 @@ export default class Navbar extends mixins(ThemeDetector) {}
 
 .navbar__theme-switcher {
     margin-top: r(-6.5);
-    color: $color-foreground;
+    font-weight: $font-weight-medium;
     cursor: pointer;
     transition: color $transition-duration-default;
 
@@ -76,8 +70,6 @@ body.dark-theme {
     }
 
     .navbar__theme-switcher {
-        color: $color-background;
-
         &:hover {
             color: $color-primary-darker;
         }

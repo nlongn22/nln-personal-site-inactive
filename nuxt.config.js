@@ -57,12 +57,6 @@ export default {
             },
             { rel: 'manifest', href: 'favicons/site.webmanifest' },
         ],
-        script: [
-            {
-                src: 'https://kit.fontawesome.com/493dde0de6.js',
-                crossorigin: 'anonymous',
-            },
-        ],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css

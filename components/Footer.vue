@@ -2,14 +2,14 @@
     <footer class="footer">
         <section>
             <a
-                v-for="(link, index) in iconLinks"
+                v-for="(link, index) in contactLinks"
                 :key="index"
-                :href="iconLinks[index]"
-                :title="iconTitles[index]"
+                :href="contactLinks[index]"
+                :title="contactTitles[index]"
                 target="_blank"
-                class="footer__icon"
+                class="footer__contact"
             >
-                <i :class="iconNames[index]" />
+                {{ contactNames[index] }} &#8250;
             </a>
         </section>
     </footer>
@@ -20,19 +20,19 @@ import { Component, Vue } from 'nuxt-property-decorator';
 
 @Component({})
 export default class Footer extends Vue {
-    iconLinks: string[] = [
+    contactLinks: string[] = [
         'https://linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
         'mailto:22nlongn@gmail.com',
         'https://github.com/nlongn22',
     ];
 
-    iconTitles: string[] = [
+    contactTitles: string[] = [
         'Go to linkedin.com',
         'Email 22nlongn@gmail.com',
         'Go to github.com',
     ];
 
-    iconNames: string[] = ['fa fa-linkedin', 'fa fa-envelope', 'fa fa-github'];
+    contactNames: string[] = ['LinkedIn', 'Email', 'GitHub'];
 }
 </script>
 
@@ -41,14 +41,8 @@ export default class Footer extends Vue {
     margin-block-start: $space-7;
 }
 
-.footer__icon {
-    font-size: $space-3;
-    transition: color 0.3s;
-    cursor: pointer;
-
-    &:hover {
-        color: $color-primary-regular;
-    }
+.footer__contact {
+    @include border-bottom-link;
 
     &:nth-child(2) {
         margin-inline: $space-2;
@@ -56,9 +50,10 @@ export default class Footer extends Vue {
 }
 
 body.dark-theme {
-    .footer__icon {
-        &:hover {
-            color: $color-primary-darker;
+    .footer__contact {
+        &:hover,
+        &.nuxt-link-exact-active {
+            border-color: $color-border-darker;
         }
     }
 }
