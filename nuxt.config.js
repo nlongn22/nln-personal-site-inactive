@@ -76,9 +76,9 @@ export default {
         // https://go.nuxtjs.dev/stylelint
         '@nuxtjs/stylelint-module',
         '@nuxtjs/style-resources',
-        '@nuxtjs/google-fonts',
-        '@nuxtjs/svg',
         '@nuxtjs/sitemap',
+        '@nuxtjs/svg',
+        '@nuxtjs/google-fonts',
         //  'nuxt-purgecss',
     ],
 

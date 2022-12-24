@@ -1,4 +1,4 @@
-import {Component, Watch, Vue} from 'nuxt-property-decorator';
+import { Component, Watch, Vue } from 'nuxt-property-decorator';
 
 @Component({})
 class ThemeDetector extends Vue {

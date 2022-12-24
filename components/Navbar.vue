@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import {Component, mixins} from 'nuxt-property-decorator';
+import { Component, mixins } from 'nuxt-property-decorator';
 import ThemeDetector from '@/mixins/ThemeDetector';
 
 @Component({})

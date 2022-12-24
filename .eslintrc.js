@@ -17,9 +17,8 @@ module.exports = {
         },
     },
     extends: [
-        '@nuxtjs',
-        'plugin:nuxt/recommended',
         '@nuxtjs/eslint-config-typescript',
+        'plugin:nuxt/recommended',
     ],
     rules: {
         semi: ['error', 'always'],
