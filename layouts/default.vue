@@ -1,18 +1,18 @@
 <template>
     <div class="container">
-        <Navbar />
-        <Nuxt />
-        <Footer />
+        <Navbar/>
+        <Nuxt/>
+        <Footer/>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, mixins } from 'nuxt-property-decorator';
+import {Component, mixins} from 'nuxt-property-decorator';
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import ThemeDetector from '@/mixins/ThemeDetector';
 
-@Component({ components: { Navbar, Footer } })
+@Component({components: {Navbar, Footer}})
 export default class DefaultLayout extends mixins(ThemeDetector) {
     mounted(): void {
         this.setTheme(this.mediaPreference);
