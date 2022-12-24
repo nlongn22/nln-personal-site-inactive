@@ -1,14 +1,14 @@
 <template>
     <nav class="navbar">
         <section>
-            <nuxt-link to="/" class="navbar__link">Home</nuxt-link>
+            <nuxt-link to="/" class="navbar__link border-bottom">Home</nuxt-link>
         </section>
 
         <section class="navbar__right">
-            <nuxt-link to="/skills" class="navbar__link">
+            <nuxt-link to="/skills" class="navbar__link border-bottom">
                 Skills
             </nuxt-link>
-            <nuxt-link to="/projects" class="navbar__link">
+            <nuxt-link to="/projects" class="navbar__link border-bottom">
                 Projects
             </nuxt-link>
             <span
@@ -39,10 +39,6 @@ export default class Navbar extends mixins(ThemeDetector) {
     margin-block-end: $space-7;
 }
 
-.navbar__link {
-    @include border-bottom-link;
-}
-
 .navbar__right {
     display: flex;
     align-items: center;
@@ -62,17 +58,6 @@ export default class Navbar extends mixins(ThemeDetector) {
 }
 
 body.dark-theme {
-
-    .navbar__link {
-
-        &.nuxt-link-exact-active {
-            border-color: $color-border-darker;
-        }
-
-        @include has-hover {
-            border-color: $color-border-darker;
-        }
-    }
 
     .navbar__theme-switcher {
         @include has-hover {

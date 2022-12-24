@@ -16,18 +16,3 @@
         }
     }
 }
-
-@mixin border-bottom-link {
-    padding-block-end: $space-0;
-    border-block-end: r(2.5) solid transparent;
-    font-weight: $font-weight-medium;
-    transition: border-color $transition-duration-default;
-
-    &.nuxt-link-exact-active {
-        border-color: $color-border-regular;
-    }
-
-    @include has-hover {
-        border-color: $color-border-regular;
-    }
-}

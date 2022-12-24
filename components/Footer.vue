@@ -3,11 +3,11 @@
         <section>
             <a
                 v-for="(link, index) in contactLinks"
-                :key="index"
+                :key="link"
                 :href="contactLinks[index]"
                 :title="contactTitles[index]"
                 target="_blank"
-                class="footer__contact"
+                class="footer__contact border-bottom"
             >
                 {{ contactNames[index] }} &#8250;
             </a>
@@ -48,19 +48,9 @@ export default class Footer extends Vue {
 }
 
 .footer__contact {
-    @include border-bottom-link;
 
     &:nth-child(2) {
         margin-inline: $space-2;
-    }
-}
-
-body.dark-theme {
-
-    .footer__contact {
-        @include has-hover {
-            border-color: $color-border-darker;
-        }
     }
 }
 </style>
