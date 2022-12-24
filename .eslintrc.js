@@ -23,6 +23,7 @@ module.exports = {
     rules: {
         semi: ['error', 'always'],
         indent: ['error', 4],
+        'no-console': 'off',
         'comma-dangle': ['error', 'always-multiline'],
         'space-before-function-paren': ['error', 'never'],
         '@typescript-eslint/no-inferrable-types': 0,

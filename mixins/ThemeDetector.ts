@@ -4,6 +4,10 @@ import { Component, Watch, Vue } from 'nuxt-property-decorator';
 class ThemeDetector extends Vue {
     currentTheme: string = '';
 
+    mounted(): void {
+        this.currentTheme = this.mediaPreference;
+    }
+
     get mediaPreference(): string {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const deviceTheme = prefersDark ? 'dark-theme' : 'light-theme';
