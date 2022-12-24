@@ -56,7 +56,7 @@ export default class Navbar extends mixins(ThemeDetector) {
     cursor: pointer;
     transition: color $transition-duration-default;
 
-    &:hover {
+    @include has-hover {
         color: $color-primary-regular;
     }
 }
@@ -65,15 +65,17 @@ body.dark-theme {
 
     .navbar__link {
 
-        &:hover,
         &.nuxt-link-exact-active {
+            border-color: $color-border-darker;
+        }
+
+        @include has-hover {
             border-color: $color-border-darker;
         }
     }
 
     .navbar__theme-switcher {
-
-        &:hover {
+        @include has-hover {
             color: $color-primary-darker;
         }
     }

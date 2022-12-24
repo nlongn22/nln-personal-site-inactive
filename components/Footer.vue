@@ -58,9 +58,7 @@ export default class Footer extends Vue {
 body.dark-theme {
 
     .footer__contact {
-
-        &:hover,
-        &.nuxt-link-exact-active {
+        @include has-hover {
             border-color: $color-border-darker;
         }
     }
