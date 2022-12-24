@@ -4,9 +4,7 @@ export default {
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'Ngoc Long Nguyen',
-        htmlAttrs: {
-            lang: 'en',
-        },
+        htmlAttrs: { lang: 'en' },
         meta: [
             { charset: 'utf-8' },
             {
@@ -60,7 +58,10 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: ['assets/scss/common/index.scss', 'assets/scss/partials/index.scss'],
+    css: [
+        'assets/scss/common/index.scss',
+        'assets/scss/partials/index.scss'
+    ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [],
@@ -78,16 +79,24 @@ export default {
         '@nuxtjs/google-fonts',
         '@nuxtjs/svg',
         '@nuxtjs/sitemap',
-        'nuxt-purgecss',
+        //  'nuxt-purgecss',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: ['@nuxtjs/sitemap'],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+    build: { postcss: false },
 
     loading: { color: '#78b7bb' },
+
+    typescript: {
+        typeCheck: {
+            eslint: {
+                files: './**/*.{ts,js,vue}'
+            },
+        },
+    },
 
     styleResources: {
         scss: ['assets/scss/core/index.scss'],

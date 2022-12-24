@@ -1,21 +1,21 @@
 @mixin page-gutter() {
-	@each $bp in map-keys($page-gutters) {
-		$gutter: map-get($page-gutters, $bp);
+    @each $bp in map-keys($page-gutters) {
+        $gutter: map-get($page-gutters, $bp);
 
-		@include breakpoint($bp) {
-			padding-inline: $gutter;
-		}
-	}
+        @include breakpoint($bp) {
+            padding-inline: $gutter;
+        }
+    }
 }
 
 @mixin border-bottom-link {
-	padding-block-end: $space-0;
-	border-block-end: r(2.5) solid transparent;
-	font-weight: $font-weight-medium;
-	transition: border-color $transition-duration-default;
+    padding-block-end: $space-0;
+    border-block-end: r(2.5) solid transparent;
+    font-weight: $font-weight-medium;
+    transition: border-color $transition-duration-default;
 
-	&:hover,
-	&.nuxt-link-exact-active {
-		border-color: $color-border-regular;
-	}
+    &:hover,
+    &.nuxt-link-exact-active {
+        border-color: $color-border-regular;
+    }
 }

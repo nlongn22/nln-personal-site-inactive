@@ -62,18 +62,18 @@ $space-24: r(192);
 $global-max-width: r(670);
 
 $page-gutters: (
-	tiny: $space-2,
-	small: $space-5,
-	tablet: $space-7,
-	desktop: 0,
+        tiny: $space-2,
+        small: $space-5,
+        tablet: $space-7,
+        desktop: 0,
 );
 
 $breakpoints: (
-	tiny: 0,
-	phone: 461px,
-	small: 601px,
-	tablet: 901px,
-	desktop: 1201px,
-	medium: 1501px,
-	large: 1801px
+        tiny: 0,
+        phone: 461px,
+        small: 601px,
+        tablet: 901px,
+        desktop: 1201px,
+        medium: 1501px,
+        large: 1801px
 );

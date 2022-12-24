@@ -24,68 +24,65 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	padding: 0;
-}
-
-* {
-	tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	block-size: 100%;
-	inline-size: 100%;
-	overflow-x: hidden;
-	font-size: 100%;
+    block-size: 100%;
+    inline-size: 100%;
+    overflow-x: hidden;
+    font-size: 100%;
 
-	&.is-open {
-		overflow: hidden;
-	}
+    &.is-open {
+        overflow: hidden;
+    }
+}
+
+::selection {
+    background-color: $color-secondary;
 }
 
 body {
-	text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-ms-text-size-adjust: 100%;
-	font-family: $font-family-primary;
-	font-size: r(16);
-	font-weight: $font-weight-regular;
-	font-variant-numeric: lining-nums;
-	line-height: 1.5em;
-	letter-spacing: 0;
-	background-color: $color-background;
-	color: $color-foreground;
-	padding: 0;
-	margin: 0;
-	inline-size: 100%;
-	block-size: auto;
-	transition: all $transition-duration-slow;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font-family-primary;
+    font-size: r(16);
+    font-weight: $font-weight-regular;
+    font-variant-numeric: lining-nums;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    background-color: $color-background;
+    color: $color-foreground;
+    padding: 0;
+    margin: 0;
+    inline-size: 100%;
+    block-size: auto;
+    transition: all $transition-duration-slow;
 
-	&.dark-theme {
-		background-color: $color-background-inverted;
-		color: $color-foreground-inverted;
+    &.dark-theme {
+        background-color: $color-background-inverted;
+        color: $color-foreground-inverted;
 
-		&::-webkit-scrollbar-track {
-		    background-color: $color-background-inverted;
-		}
+        &::-webkit-scrollbar-track {
+            background-color: $color-background-inverted;
+        }
 
-		&::-webkit-scrollbar-thumb {
-		    border-radius: $border-radius-xs;
-		    background-color: $color-foreground-inverted;
-		}
+        &::-webkit-scrollbar-thumb {
+            border-radius: $border-radius-xs;
+            background-color: $color-foreground-inverted;
+        }
 
-		::selection {
-			background-color: $color-gray-100;
-		}
-	}
+        ::selection {
+            background-color: $color-gray-100;
+        }
+    }
 }
 
 h1,
@@ -96,74 +93,73 @@ h5,
 h6,
 strong,
 b {
-	font-weight: $font-weight-bold;
+    font-weight: $font-weight-bold;
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 img {
-	max-inline-size: 100%;
-	inline-size: 100%;
-	block-size: auto;
+    max-inline-size: 100%;
+    inline-size: 100%;
+    block-size: auto;
 }
 
 a {
-	outline: 0;
-	box-shadow: none;
-	color: inherit;
-	text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 button {
-	display: inline-flex;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	appearance: none;
-	color: currentColor;
-	background: none;
-	cursor: pointer;
+    display: inline-flex;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    color: currentcolor;
+    background: none;
+    cursor: pointer;
 }
 
 svg {
-	display: block;
+    display: block;
 }
 
 button,
 input,
 textarea {
-	font-family: $font-family-primary;
+    font-family: $font-family-primary;
 }
 
 input,
 select,
 textarea {
-	-webkit-appearance: none;
-	border-radius: 0;
+    border-radius: 0;
 }
 
 textarea {
-	resize: none;
+    resize: none;
 }
 
 mark {
-	background-color: transparent;
-	color: var(--color-foreground-inverted);
+    background-color: transparent;
+    color: var(--color-foreground-inverted);
 }
 
 address {
-	font-style: normal;
+    font-style: normal;
 }
 
 time {
-	display: inline-block;
+    display: inline-block;
 }
 
 hr {
-	border: 0;
-	border-block-end: $border-width-thin solid $color-border-regular;
+    border: 0;
+    border-block-end: $border-width-thin solid $color-border-regular;
 }
 
 ::-webkit-scrollbar {
@@ -179,12 +175,8 @@ hr {
     background-color: $color-foreground;
 }
 
-::selection {
-    background-color: $color-secondary;
-}
-
 #app {
-	position: relative;
-	inline-size: 100%;
-	block-size: 100%;
+    position: relative;
+    inline-size: 100%;
+    block-size: 100%;
 }

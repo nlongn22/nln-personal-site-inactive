@@ -1,4 +1,4 @@
-import {Component, Watch, Vue} from 'nuxt-property-decorator';
+import { Component, Watch, Vue } from 'nuxt-property-decorator';
 
 @Component({})
 class ThemeDetector extends Vue {
@@ -37,7 +37,6 @@ class ThemeDetector extends Vue {
         const themeColor = color === 'dark-theme' ? '#232931' : '#fbfbfb';
         document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor);
     }
-
 }
 
 export default ThemeDetector;

@@ -24,6 +24,7 @@ export default class DefaultLayout extends mixins(ThemeDetector) {
 <style lang="scss" scoped>
 .container {
     @include page-gutter;
+
     inline-size: 100%;
     max-inline-size: $global-max-width;
     margin-inline: auto;
@@ -31,18 +32,21 @@ export default class DefaultLayout extends mixins(ThemeDetector) {
 }
 
 @include breakpoint(r(700)) {
+
     .container {
         padding-block: r(65);
     }
 }
 
 @include breakpoint(medium) {
+
     .container {
         padding-block: r(120);
     }
 }
 
 @include breakpoint(large) {
+
     .container {
         padding-block: r(140);
     }

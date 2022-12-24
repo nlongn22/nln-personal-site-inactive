@@ -3,5 +3,5 @@
 $global-font-size: 100%;
 
 @function r($pixels) {
-	@return rem-calc($pixels * 1px);
+    @return rem-calc($pixels * 1px);
 }

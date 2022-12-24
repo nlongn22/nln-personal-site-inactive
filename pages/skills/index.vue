@@ -5,9 +5,9 @@
             <ul>
                 <li v-for="(experience, index) in experiences" :key="index">
                     {{ experience.company }}
-                    <span class="skills__company-duration"
-                        >({{ experience.duration }})</span
-                    >
+                    <span class="skills__company-duration">
+                        ({{ experience.duration }})
+                    </span>
                 </li>
             </ul>
         </section>
@@ -35,32 +35,40 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
 
-interface IExperience {
+export interface IExperience {
     company: string;
     duration: string;
 }
 
 @Component({})
 export default class IndexPage extends Vue {
-    experiences: IExperience[] = [
-        {
-            company: 'Apploud Digital',
-            duration: 'January 2022 - August 2022',
-        },
-    ];
-    languages: string[] = ['Czech', 'English', 'German', 'Vietnamese'];
-    technologies: string[] = [
-        'Nuxt.js',
-        'Vue.js',
-        'Javascript + Typescript',
-        'HTML 5',
-        'CSS + SASS',
-        'GSAP',
-        'GIT',
-        'REST API',
-        'GraphQL',
-        'DatoCMS',
-    ];
+    get experiences(): IExperience[] {
+        return [
+            {
+                company: 'Apploud Digital',
+                duration: 'January 2022 - August 2022',
+            },
+        ];
+    }
+
+    get languages(): string[] {
+        return ['Czech', 'English', 'German', 'Vietnamese'];
+    }
+
+    get technologies(): string[] {
+        return [
+            'Nuxt.js',
+            'Vue.js',
+            'Javascript + Typescript',
+            'HTML 5',
+            'CSS + SASS',
+            'GSAP',
+            'GIT',
+            'REST API',
+            'GraphQL',
+            'DatoCMS',
+        ];
+    }
 
     head() {
         return {

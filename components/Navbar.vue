@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar">
         <section>
-            <nuxt-link to="/" class="navbar__link"> Home </nuxt-link>
+            <nuxt-link to="/" class="navbar__link">Home</nuxt-link>
         </section>
 
         <section class="navbar__right">
@@ -27,8 +27,8 @@ import ThemeDetector from '@/mixins/ThemeDetector';
 
 @Component({})
 export default class Navbar extends mixins(ThemeDetector) {
-    get currentThemeLabel() {
-        return this.currentTheme === "dark-theme" ? 'Light' : 'Dark';
+    get currentThemeLabel(): string {
+        return this.currentTheme === 'dark-theme' ? 'Light' : 'Dark';
     }
 }
 </script>
@@ -62,7 +62,9 @@ export default class Navbar extends mixins(ThemeDetector) {
 }
 
 body.dark-theme {
+
     .navbar__link {
+
         &:hover,
         &.nuxt-link-exact-active {
             border-color: $color-border-darker;
@@ -70,6 +72,7 @@ body.dark-theme {
     }
 
     .navbar__theme-switcher {
+
         &:hover {
             color: $color-primary-darker;
         }
@@ -77,6 +80,7 @@ body.dark-theme {
 }
 
 @include breakpoint(r(700)) {
+
     .navbar {
         justify-content: space-between;
     }

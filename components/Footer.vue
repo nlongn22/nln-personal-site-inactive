@@ -20,19 +20,25 @@ import { Component, Vue } from 'nuxt-property-decorator';
 
 @Component({})
 export default class Footer extends Vue {
-    contactLinks: string[] = [
-        'https://linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
-        'mailto:22nlongn@gmail.com',
-        'https://github.com/nlongn22',
-    ];
+    get contactLinks(): string[] {
+        return [
+            'https://linkedin.com/in/ngoc-long-nguyen-0aa4bb243',
+            'mailto:22nlongn@gmail.com',
+            'https://github.com/nlongn22',
+        ];
+    }
 
-    contactTitles: string[] = [
-        'Go to linkedin.com',
-        'Email 22nlongn@gmail.com',
-        'Go to github.com',
-    ];
+    get contactTitles(): string[] {
+        return [
+            'Go to linkedin.com',
+            'Email 22nlongn@gmail.com',
+            'Go to github.com',
+        ];
+    }
 
-    contactNames: string[] = ['LinkedIn', 'Email', 'GitHub'];
+    get contactNames(): string[] {
+        return ['LinkedIn', 'Email', 'GitHub'];
+    }
 }
 </script>
 
@@ -50,7 +56,9 @@ export default class Footer extends Vue {
 }
 
 body.dark-theme {
+
     .footer__contact {
+
         &:hover,
         &.nuxt-link-exact-active {
             border-color: $color-border-darker;

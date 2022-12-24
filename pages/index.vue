@@ -23,13 +23,13 @@
         <section>
             <p>
                 Hey there &#128075;.
-                <br />
+                <br>
                 My name is Ngoc Long Nguyen but most people call me Filip. I'm a
                 20 year old frontend developer who currently lives in
                 <s>Munich</s> Berlin, Germany. At the moment I'm studying
                 computer science at the Technical University of Berlin.
-                <br />
-                <br />
+                <br>
+                <br>
                 In my free time (when I'm not learning anything) I like to watch
                 TV shows or hang out with my friends. I'm quite a big fan of
                 Formula 1 so every weekend is spent watching races and following
@@ -41,10 +41,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
+
 @Component({})
 export default class IndexPage extends Vue {
-    message: string = 'Welcome!';
-    index: number = 0;
+    get message() {
+        return 'Welcome!';
+    }
 
     //  typeWriter(string: string): void {
     //      const stringArray = string.split('');
@@ -107,6 +109,7 @@ export default class IndexPage extends Vue {
 }
 
 @keyframes blink {
+
     0% {
         opacity: 1;
     }
@@ -130,12 +133,14 @@ export default class IndexPage extends Vue {
 }
 
 body.dark-theme {
+
     .message__cursor {
         color: $color-primary-darker;
     }
 }
 
 @include breakpoint(r(700)) {
+
     .message__header {
         font-size: r(48);
     }
